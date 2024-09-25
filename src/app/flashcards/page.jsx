@@ -3,7 +3,7 @@
 import axios from 'axios';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Typography, List, ListItem, ListItemButton } from '@mui/material';
+import { Typography, List, ListItem, Button } from '@mui/material';
 
 export default function Home() {
   const [decks, setDecks] = useState([]);
@@ -26,11 +26,11 @@ export default function Home() {
       <List>
         {decks.map(deck => (
           <ListItem key={deck.id} disablePadding>
-            <ListItemButton component={Link} href={`/flashcards/${deck.id}`} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+            <Button variant="contained" component={Link} href={`/flashcards/${deck.id}`} sx={{ width: '200px', textAlign: 'center', justifyContent: 'center', textTransform: 'none', margin: '.5em' }}>
               <Typography variant="h5" component="div">
                 {deck.name}
               </Typography>
-            </ListItemButton>
+            </Button>
           </ListItem>
         ))}
       </List>

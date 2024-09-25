@@ -30,7 +30,7 @@ export default function DeckLayout({ params, children }) {
         <Toolbar>
           <Fab variant="extended" onClick={goToDecksPage} sx={{ position: 'absolute', left: 10, top: 6 }}>
             <ArrowBackIcon sx={{ mr: 1 }}/>
-            menu
+            decks
           </Fab>
           <Box sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center', gap: 2 }}>
             <Button color="inherit" onClick={goToSelectPage}>Select</Button>

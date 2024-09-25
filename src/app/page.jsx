@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link';
-import { Typography, List, ListItem, ListItemButton } from '@mui/material';
+import { Button, Typography, List, ListItem } from '@mui/material';
 
 export default function Home() {
   return (
@@ -9,13 +9,19 @@ export default function Home() {
       <Typography variant="h2" component="h1" gutterBottom style={{ textAlign: 'center' }}>
         Menu
       </Typography>
+
+      <Button variant="contained" component={Link} href={`/instructions/`} sx={{ margin: '5vh', textTransform: 'none', }}>
+        <Typography variant="h5" component="div">
+          Please click here for instructions.
+        </Typography>
+      </Button>
       <List>
         <ListItem disablePadding>
-          <ListItemButton component={Link} href={`/flashcards/`} sx={{ textAlign: 'center', justifyContent: 'center' }}>
+          <Button variant="contained" component={Link} href={`/flashcards/`} sx={{ textAlign: 'center', justifyContent: 'center' }}>
             <Typography variant="h5" component="div">
               Flashcards
             </Typography>
-          </ListItemButton>
+          </Button>
         </ListItem>
       </List>
     </div>
