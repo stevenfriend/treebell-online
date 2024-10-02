@@ -20,8 +20,8 @@ const TicTacToe = () => {
     }, []);
 
     const fetchFlashcards = async (cardIds) => {
+        const api = process.env.NEXT_PUBLIC_API_URL;
         try {
-            api = process.env.NEXT_PUBLIC_API_URL;
             const promises = cardIds.map(id =>
                 axios.get(`${api}/flashcards/${id}`)
             );
