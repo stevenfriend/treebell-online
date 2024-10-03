@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const TicTacToe = () => {
-    const [flashcards, setFlashcards] = useState([]);
     const [board, setBoard] = useState(Array(9).fill({ player: null }));
     const [currentPlayer, setCurrentPlayer] = useState('O');
     const [winner, setWinner] = useState(null);
