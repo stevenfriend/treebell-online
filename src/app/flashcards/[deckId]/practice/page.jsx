@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
-import { Button, Tooltip, Slider, Paper } from '@mui/material';
+import { Button, Slider, Paper } from '@mui/material';
 import ShuffleIcon from '@mui/icons-material/Shuffle';
 import ImageOutlinedIcon from '@mui/icons-material/ImageOutlined';
 import AbcOutlinedIcon from '@mui/icons-material/AbcOutlined';
@@ -141,14 +141,13 @@ export default function PracticePage() {
             <div style={{
               position: 'relative',
               backgroundColor: 'white',
-              height: '80vh',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
             }} onClick={() => setTempDisplayBoth(prev => !prev)} >
               <img src={flashcards[current].image} alt={flashcards[current].vocab} style={{
                 maxWidth: '100%',
-                height: '100%',
+                objectFit: 'contain',
                 opacity: (displayMode === 'vocab' && !tempDisplayBoth) ? 0 : 1,
                 transition: enableTransition ? 'all 300ms ease' : 'none'
               }} />

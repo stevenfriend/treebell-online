@@ -1,7 +1,5 @@
 'use client'
 
-
-import * as React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Card, CardContent, CardMedia, Typography, CardActionArea, Skeleton, Switch } from '@mui/material';
@@ -128,7 +126,7 @@ export default function Deck({ params }) {
                   </div>
                   <div style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))',
                         gap: '1em',
                         marginBottom: '1em',
                         justifyContent: 'space-between',
